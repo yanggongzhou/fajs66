@@ -3,21 +3,6 @@ import Router from '@system.router';
 export default {
     data: {
         currentIndex: 0,
-        // videoList: [
-        //     {
-        //         "id": "1",
-        //         "name": "第一集",
-        //         "mp4": "/assets/test.mp4",
-        //         "cover": "https://nvideo.dramaboxdb.com/33/9x6/96x6/966x0/96600100014/550914633_1/550914633.mp4.jpg",
-        //     },
-        //     {
-        //         "id": "2",
-        //         "name": "第2集",
-        //         "mp4": "/common/video/video.mp4",
-        //         "cover": "https://nvideo.dramaboxdb.com/33/9x6/96x6/966x0/96600100014/550914633_1/550914633.mp4.jpg",
-        //     },
-        // ],
-
         videoList: [
             {
                 "id": "550914633",

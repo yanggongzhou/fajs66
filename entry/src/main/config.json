@@ -37,7 +37,6 @@
             ]
           }
         ],
-        "permissions": ["ohos.permission.INTERNET"],
         "name": "com.example.fajs66.MainAbility",
         "icon": "$media:icon",
         "description": "$string:mainability_description",
@@ -51,8 +50,7 @@
       {
         "pages": [
           "pages/index/index",
-          "pages/second/second",
-          "pages/video/videopage"
+          "pages/second/second"
         ],
         "name": "default",
         "window": {

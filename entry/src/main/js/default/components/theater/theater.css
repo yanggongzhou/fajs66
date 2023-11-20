@@ -87,6 +87,9 @@
     width: 100%;
     flex-shrink: 0;
 }
+.moreLoadingTxt {
+    font-size: 12px;
+}
 
 .loading {
     margin-right: 5px;

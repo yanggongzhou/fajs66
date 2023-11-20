@@ -16,7 +16,7 @@
             </text>
             <div class="list">
                 <div for="{{ $item.items }}" class="listItem" onclick="jumpVideo($item)">
-                    <image class="bookCover" src="{{ $item.cover }}" alt="../../assets/defaultBook.png"></image>
+                    <image class="bookCover" src="{{ $item.cover }}" alt="../../assets/default_cover.png"></image>
                     <text class="bookName">
                         {{ $item.bookName }}
                     </text>
@@ -32,7 +32,7 @@
             </text>
             <div class="list">
                 <div for="{{ list }}" class="listItem" onclick="jumpVideo($item)">
-                    <image class="bookCover" src="{{ $item.cover_url }}" alt="../../assets/defaultBook.png"></image>
+                    <image class="bookCover" src="{{ $item.cover_url }}" alt="../../assets/default_cover.png"></image>
                     <text class="bookName">
                         {{ $item.title }}
                     </text>
@@ -44,8 +44,8 @@
     <list-item>
         <div class="moreLoading">
             <image class="loading" src="../../common/images/ic_loading.png"></image>
-            <text>
-                <span>加载中...</span>
+            <text class="moreLoadingTxt">
+                加载中...
             </text>
         </div>
     </list-item>

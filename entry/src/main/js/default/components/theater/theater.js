@@ -35,7 +35,7 @@ export default {
     },
     jumpVideo(item) {
         Router.push({
-            uri: "pages/video/videopage"
+            uri: "pages/second/second"
         })
     },
 
