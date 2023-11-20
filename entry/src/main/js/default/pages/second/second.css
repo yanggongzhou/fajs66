@@ -10,24 +10,35 @@
     height: 100%;
 }
 
+.swiper {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+}
+
 .videoBox {
     width: 100%;
     height: 100%;
-    object-fit:fill;
+    object-fit: fill;
 }
 
-.btn, .btn2 {
+.backBtn {
     position: fixed;
-    left: 25px;
-    top: 30px;
-    z-index: 9;
-    font-size: 15px;
-    font-weight: bold;
-    text-align: center;
-    width: 40%;
-    height: 5%;
+    left: 0px;
+    top: 10px;
+    z-index: 99;
+    align-items: center;
+    padding: 5px 15px;
 }
 
-.btn2 {
-    top: 80px;
+.backIcon {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.backTxt {
+    font-size: 15px;
+    color: #FFFFFF;
 }

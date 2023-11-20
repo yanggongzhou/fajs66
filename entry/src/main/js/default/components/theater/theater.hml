@@ -1,5 +1,5 @@
 <list class="container" @scrollbottom="scrollbottom">
-    <list-item class="itemBox">
+    <list-item class="itemBox" clickeffect="false">
        <div>
            <swiper autoplay="true" class="swiper" id="swiper" index="0" indicator="true" loop="true" digital="false"
                    scrolleffect="spring">
@@ -8,7 +8,7 @@
            </swiper>
        </div>
     </list-item>
-    <list-item>
+    <list-item clickeffect="false">
         <div class="columnBox">
             <text class="columnName">
                 Mock Data
@@ -24,7 +24,7 @@
         </div>
     </list-item>
 
-    <list-item for="homeData">
+    <list-item for="homeData" clickeffect="false">
         <div class="columnBox">
             <text class="columnName">
                 {{ $item.name }}
@@ -40,7 +40,7 @@
         </div>
 
     </list-item>
-    <list-item>
+    <list-item clickeffect="false">
         <div class="moreLoading">
             <image class="loading" src="../../common/images/ic_loading.png"></image>
             <text class="moreLoadingTxt">

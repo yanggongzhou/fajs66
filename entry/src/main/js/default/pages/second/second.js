@@ -1,8 +1,6 @@
-
 import Router from '@system.router';
 export default {
     data: {
-        currentIndex: 0,
         videoList: [
             {
                 "id": "550914633",
@@ -35,11 +33,6 @@ export default {
                 "cover": "https://nvideo.dramaboxdb.com/73/9x6/96x6/966x0/96600100014/550914637_1/550914637.mp4.jpg",
             }
         ],
-        isStart: false,
-    },
-
-    swiperChange({ index }) {
-        this.currentIndex = index;
     },
 
     onInit() {

@@ -1,0 +1,19 @@
+<element src="../../components/player/player.hml" name="player-info"></element>
+
+<swiper class="swiper"
+        id="swiper"
+        autoplay="false"
+        index="{{ currentIndex }}"
+        indicator="true"
+        loop="false"
+        digital="false"
+        vertical="true"
+        @change="swiperChange">
+    <player-info
+            active="{{ currentIndex === $idx }}"
+            current="{{ $idx }}"
+            for="{{ videoList }}"
+            poster="{{ $item.cover }}"
+            src="{{ $item.mp4 }}">
+    </player-info>
+</swiper>
