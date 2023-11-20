@@ -1,0 +1,32 @@
+<div class="container">
+    <video id="{{ 'videoId' + current }}"
+           onclick="startOrPause"
+           muted="{{ muted }}"
+           src="{{ src }}"
+           autoplay="{{ autoplay }}"
+           poster="{{ poster }}"
+           controls="{{ controlShow }}"
+           loop="{{ loop }}"
+           onprepared="prepared"
+           onstart="start"
+           onpause="pause"
+           onfinish="finish"
+           ontimeupdate="timeUpdate">
+    </video>
+    <image show="{{ !isPlay }}" src="{{ publicPlayIcon }}"></image>
+    <div class="progress">
+        <div class="image-div">
+            <image src="{{ isPlay ? pauseIcon : playIcon }}" onclick="startOrPause"></image>
+        </div>
+        <div class="slider-div">
+            <text class="now-time">
+                {{ nowTime }}
+            </text>
+            <slider min="{{ sliderMin }}" max="{{ sliderMax }}" value="{{ sliderValue }}"
+                    mode="outset" onchange="change" disabled="{{ finishFlag }}"></slider>
+            <text class="duration-time">
+                {{ durationTime }}
+            </text>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+<element src="../../components/theater/theater.hml" name="theater-info"></element>
+<element src="../../components/player/player.hml" name="player-info"></element>
+
+<div class="container">
+    <div class="test"></div>
+    <div class="test2"></div>
+    <div class="test3"></div>
+    <tabs class="tabs" onchange="tabChange">
+        <tab-content class="tab-content" scrollable="false">
+            <theater-info></theater-info>
+            <player-info
+                    poster="{{ '/common/images/ic_poster.png' }}"
+                    src="{{ '/common/video/video.mp4' }}">
+            </player-info>
+            <text onclick="goSecond">我的</text>
+        </tab-content>
+        <tab-bar class="tab-bar" mode="fixed">
+            <text class="tab-text">剧场</text>
+            <text class="tab-text">播放</text>
+            <text class="tab-text">我的</text>
+        </tab-bar>
+    </tabs>
+</div>

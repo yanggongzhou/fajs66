@@ -1,0 +1,52 @@
+<list class="container" on:scrollbottom="scrollbottom">
+    <list-item class="itemBox" if="{{ homeData.length > 0 }}">
+       <div>
+           <swiper autoplay="true" class="swiper" id="swiper" index="0" indicator="true" loop="true" digital="false"
+                   scrolleffect="spring">
+               <image class="images" src="../../assets/banner1.webp"></image>
+               <image class="images" src="../../assets/banner2.webp"></image>
+           </swiper>
+       </div>
+    </list-item>
+
+    <list-item for="homeData">
+        <div class="columnBox">
+            <text class="columnName">
+                {{ $item.name }}
+            </text>
+            <div class="list">
+                <div for="{{ $item.items }}" class="listItem" onclick="jumpVideo($item)">
+                    <image class="bookCover" src="{{ $item.cover }}" alt="../../assets/defaultBook.png"></image>
+                    <text class="bookName">
+                        {{ $item.bookName }}
+                    </text>
+                </div>
+            </div>
+        </div>
+
+    </list-item>
+    <list-item if="{{ homeData.length > 0 }}">
+        <div class="columnBox">
+            <text class="columnName">
+                Mock Data
+            </text>
+            <div class="list">
+                <div for="{{ list }}" class="listItem" onclick="jumpVideo($item)">
+                    <image class="bookCover" src="{{ $item.cover_url }}" alt="../../assets/defaultBook.png"></image>
+                    <text class="bookName">
+                        {{ $item.title }}
+                    </text>
+                </div>
+            </div>
+        </div>
+    </list-item>
+
+    <list-item>
+        <div class="moreLoading">
+            <image class="loading" src="../../common/images/ic_loading.png"></image>
+            <text>
+                <span>加载中...</span>
+            </text>
+        </div>
+    </list-item>
+</list>

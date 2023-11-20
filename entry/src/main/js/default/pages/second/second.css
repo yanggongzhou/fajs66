@@ -1,0 +1,34 @@
+/* second.css */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    left: 0px;
+    top: 0px;
+    bottom: 0fp;
+    width: 100%;
+    height: 100%;
+}
+
+.videoBox {
+    width: 100%;
+    height: 100%;
+    object-fit:fill;
+}
+
+.btn, .btn2 {
+    position: fixed;
+    left: 50px;
+    top: 60px;
+    z-index: 9;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    width: 40%;
+    height: 5%;
+}
+
+.btn2 {
+    top: 160px;
+}

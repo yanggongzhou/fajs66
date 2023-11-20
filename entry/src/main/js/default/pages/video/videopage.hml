@@ -1,0 +1,46 @@
+<div class="container">
+    <swiper class="swiper" id="swiper" index="{{ playIndex }}" indicator="false"
+            loop="true" digital="false" vertical="true" onchange="changeVideo">
+        <stack class="swiperContent" for="videoList">
+            <video class="video" id='videoId{{ $idx }}' src='{{ $item.url }}' muted='false'
+                   autoplay='true' poster='' controls="false" loop='true' starttime='0' onstart="start"
+                   onpause="pause"
+                   onclick="changeStartOrPause"></video>
+
+            <div>
+                <image src="/common1/images/icon_dianzan.png" class="icon_dianzan"></image>
+                <image src="/common1/images/icon_comment.png" class="icon_comment" onclick="showComment"></image>
+                <image src="/common1/images/icon_share.png" class="icon_share" onclick="distributeVideo"></image>
+            </div>
+
+            <text class="title">
+                @华为开发者大会2021
+            </text>
+            <text class="content">
+                HarmonyOS是一款面向万物互联时代的、全新的分布式操作系统。
+            </text>
+        </stack>
+    </swiper>
+
+    <div class="commentPanel" if="{{ showCommentFlag }}">
+
+        <text class="comment-title">热门评论</text>
+        <list>
+            <list-item for="{{ commentList }}">
+                <div class="comment">
+                    <image src="{{ $item.image }}" class="iconImage"></image>
+                    <div class="comment-content">
+                        <text>{{ $item.name }}</text>
+                        <text>{{ $item.comment }}</text>
+                    </div>
+                </div>
+            </list-item>
+        </list>
+
+        <div>
+            <input type="text" value="{{ commentInfo }}" placeholder="请输入评论" onchange="commentInfoChange"></input>
+            <button type="capsule" onclick="sendConmment" class="button">发送</button>
+        </div>
+    </div>
+
+</div>
