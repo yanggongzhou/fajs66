@@ -2,9 +2,6 @@
 <element src="../../components/player/player.hml" name="player-info"></element>
 
 <div class="container">
-    <div class="test"></div>
-    <div class="test2"></div>
-    <div class="test3"></div>
     <tabs class="tabs" onchange="tabChange">
         <tab-content class="tab-content" scrollable="false">
             <theater-info></theater-info>

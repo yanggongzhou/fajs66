@@ -6,7 +6,6 @@
     align-items: center;
     left: 0px;
     top: 0px;
-    bottom: 0fp;
     width: 100%;
     height: 100%;
 }
@@ -19,10 +18,10 @@
 
 .btn, .btn2 {
     position: fixed;
-    left: 50px;
-    top: 60px;
+    left: 25px;
+    top: 30px;
     z-index: 9;
-    font-size: 30px;
+    font-size: 15px;
     font-weight: bold;
     text-align: center;
     width: 40%;
@@ -30,5 +29,5 @@
 }
 
 .btn2 {
-    top: 160px;
+    top: 80px;
 }
