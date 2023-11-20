@@ -50,7 +50,8 @@
       {
         "pages": [
           "pages/index/index",
-          "pages/second/second"
+          "pages/second/second",
+          "pages/webpage/webpage"
         ],
         "name": "default",
         "window": {

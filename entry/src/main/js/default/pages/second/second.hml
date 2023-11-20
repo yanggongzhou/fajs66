@@ -2,8 +2,8 @@
 <element src="../../components/swiperVideo/swiperVideo.hml" name="swiper-video"></element>
 
 <div class="container">
-    <div class="backBtn">
-        <image class="backIcon" src="/common/images/ic_back.png" onclick="backIndex"></image>
+    <div class="backBtn" onclick="backIndex">
+        <image class="backIcon" src="/common/images/ic_back.png"></image>
         <text class="backTxt">返回</text>
     </div>
     <swiper-video video-list="{{ videoList }}"></swiper-video>

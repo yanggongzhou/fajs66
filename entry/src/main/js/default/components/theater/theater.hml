@@ -42,7 +42,7 @@
     </list-item>
     <list-item clickeffect="false">
         <div class="moreLoading">
-            <image class="loading" src="../../common/images/ic_loading.png"></image>
+            <chart class="loading" type="loading" segments="{{ loadingData }}"></chart>
             <text class="moreLoadingTxt">
                 加载中...
             </text>

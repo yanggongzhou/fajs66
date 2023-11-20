@@ -29,6 +29,10 @@ export default {
         milliSeconds: 1000,
         finishFlag: false,
         isLoading: true,
+        loadingData: {
+            startColor: "#ffc0cb",
+            endColor: "#00bfff",
+        },
     },
 
     onInit() {

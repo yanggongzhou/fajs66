@@ -7,6 +7,10 @@ export default {
         title: "zzz",
         list: [],
         homeData: [],
+        loadingData: {
+            startColor: "#ffc0cb",
+            endColor: "#00bfff",
+        },
     },
     onInit() {
         this.list = homeList.list;

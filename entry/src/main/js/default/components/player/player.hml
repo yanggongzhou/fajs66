@@ -14,7 +14,10 @@
            ontimeupdate="timeUpdate">
     </video>
     <div if="{{ isLoading }}" class="loadingBox">
-        <image class="loadingIcon" src="../../common/images/ic_loading.png"></image>
+        <stack class="loadingIcon" >
+            <chart type="loading" segments="{{ loadingData }}"></chart>
+        </stack>
+<!--        <image class="loadingIcon" src="../../common/images/ic_loading.png"></image>-->
     </div>
    <div else class="playIconBox" onclick="startOrPause()">
        <image class="playIcon" show="{{ !isPlay }}" src="{{ publicPlayIcon }}"></image>

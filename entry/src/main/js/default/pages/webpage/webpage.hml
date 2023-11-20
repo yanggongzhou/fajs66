@@ -1,0 +1,9 @@
+<div class="container">
+
+    <button onclick="reloadWeb">click to reload</button>
+
+    <div style="height: 500px; width: 500px; flex-direction: column;">
+        <button onclick="reloadWeb">click to reload</button>
+        <web src="{{webUrl}}" id="webId" onpagestart="pageStart" onpagefinish="pageFinish" on:error="pageError"></web>
+    </div>
+</div>
