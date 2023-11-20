@@ -35,14 +35,11 @@ export default {
                 "cover": "https://nvideo.dramaboxdb.com/73/9x6/96x6/966x0/96600100014/550914637_1/550914637.mp4.jpg",
             }
         ],
-
-
-
         isStart: false,
     },
 
-    swiperChange(currentIndex) {
-        this.currentIndex = currentIndex;
+    swiperChange({ index }) {
+        this.currentIndex = index;
     },
 
     onInit() {

@@ -1,9 +1,11 @@
+import Prompt from '@system.prompt';
+
 export default {
     props: {
         poster: String,
         src: String,
         current: Number,
-        // active: Boolean,
+        active: Boolean,
     },
     data: {
         muted: false,
@@ -25,29 +27,33 @@ export default {
         initTime: '00:00',
         paddingLen: 2,
         milliSeconds: 1000,
-        finishFlag: false
+        finishFlag: false,
+        isLoading: true,
     },
 
     onInit() {
-        // this.$watch('active', 'onWatchActive');
-        // console.log('active=====================>', this.active)
-        // this.src = "https://db.bbwhcmjx.cn/mp40306xiaocaishen1.mp4";
-        // this.src = "https://vd2.bdstatic.com/mda-phpnz38414v6p7i7/540p/h264_cae/1692893580902491632/mda-phpnz38414v6p7i7.mp4"
+        this.$watch('active', 'onWatchActive');
     },
-    // onWatchActive(newV, oldV) {
-    //     console.info('title 属性变化 ', this.$refs.videoRef);
-    //         if (this.isPlay) {
-    //             this.$element(this.video_id).pause();
-    //         } else {
-    //             this.$element(this.video_id).start();
-    //         }
-    // },
+    onWatchActive(newV, oldV) {
+        if (this.$element('videoId' + this.current)) {
+            if (!newV) {
+                if (this.isPlay) {
+                    this.$element('videoId' + this.current).pause();
+                }
+            } else {
+                if (!this.isPlay) {
+                    this.$element('videoId' + this.current).start();
+                }
+            }
+        }
+    },
     /**
      * Video preparation completed.
      *
      * @param event return value after the video preparation is complete.
      */
     prepared(event) {
+        this.isLoading = false;
         this.duration = event.duration;
         this.durationTime = this.secondToTime(event.duration);
     },
@@ -55,6 +61,7 @@ export default {
      * The video starts to play.
      */
     start() {
+        this.isLoading = false;
         this.isPlay = true;
     },
     /**
@@ -88,12 +95,17 @@ export default {
      * Video Pause or Playback.
      */
     startOrPause() {
+        if (this.isLoading) {
+            Prompt.showToast({
+                message: '视频加载中，请稍后'
+            })
+            return
+        }
         this.finishFlag = false;
-        console.log('this.isPlay------------->', this.isPlay)
         if (this.isPlay) {
-            this.$element('videoId'+ this.current).pause();
+            this.$element('videoId' + this.current).pause();
         } else {
-            this.$element('videoId'+ this.current).start();
+            this.$element('videoId' + this.current).start();
         }
     },
     /**
@@ -103,7 +115,7 @@ export default {
      */
     change(event) {
         this.sliderValue = event.progress;
-        this.$element('videoId'+ this.current).setCurrentTime({
+        this.$element('videoId' + this.current).setCurrentTime({
             currenttime: (this.duration * event.progress / this.sliderMax)
         });
     },

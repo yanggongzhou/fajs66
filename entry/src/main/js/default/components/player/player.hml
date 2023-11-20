@@ -1,6 +1,6 @@
 <div class="container">
     <video id="{{ 'videoId' + current }}"
-           onclick="startOrPause"
+           onclick="startOrPause()"
            muted="{{ muted }}"
            src="{{ src }}"
            autoplay="{{ autoplay }}"
@@ -13,8 +13,14 @@
            onfinish="finish"
            ontimeupdate="timeUpdate">
     </video>
-    <image show="{{ !isPlay }}" src="{{ publicPlayIcon }}"></image>
-    <div class="progress">
+    <div if="{{ isLoading }}" class="loadingBox">
+        <image class="loadingIcon" src="../../common/images/ic_loading.png"></image>
+    </div>
+   <div else class="playIconBox" onclick="startOrPause()">
+       <image class="playIcon" show="{{ !isPlay }}" src="{{ publicPlayIcon }}"></image>
+   </div>
+
+    <div if="{{ !isLoading }}" class="progress">
         <div class="image-div">
             <image src="{{ isPlay ? pauseIcon : playIcon }}" onclick="startOrPause"></image>
         </div>

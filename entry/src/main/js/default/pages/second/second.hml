@@ -10,8 +10,9 @@
             loop="false"
             digital="false"
             vertical="true"
-            onchange="swiperChange">
+            @change="swiperChange">
         <player-info
+                active="{{ currentIndex === $idx }}"
                 current="{{ $idx }}"
                 for="{{ videoList }}"
                 poster="{{ $item.cover }}"
