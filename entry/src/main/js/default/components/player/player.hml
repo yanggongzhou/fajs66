@@ -1,7 +1,8 @@
+<element src="../progress/progress.hml" name="progress-info"></element>
 <div class="container">
     <stack class="video-stack">
         <video id="{{ 'videoId' + current }}"
-               onclick="startOrPause()"
+               onclick="startOrPause"
                muted="{{ muted }}"
                src="{{ src }}"
                autoplay="{{ autoplay }}"
@@ -10,37 +11,22 @@
                loop="{{ loop }}"
                onprepared="prepared"
                onstart="start"
+               onseeked="seeked"
+               onseeking="seeking"
                onpause="pause"
                onfinish="finish"
                ontimeupdate="timeUpdate">
         </video>
-
-
     </stack>
-  
     <div if="{{ isLoading }}" class="loadingBox">
-        <stack class="loadingIcon" >
-            <chart type="loading" segments="{{ loadingData }}"></chart>
-        </stack>
-<!--        <image class="loadingIcon" src="../../common/images/ic_loading.png"></image>-->
+        <image class="loadingIcon" src="/common/images/ic_loading.png"></image>
     </div>
    <div if="{{ !isLoading }}" class="playIconBox" onclick="startOrPause()">
        <image class="playIcon" if="{{ !isPlay }}" src="{{ publicPlayIcon }}"></image>
    </div>
 
-    <div if="{{ !isLoading }}" class="progress">
-        <div class="image-div">
-            <image src="{{ isPlay ? pauseIcon : playIcon }}" onclick="startOrPause"></image>
-        </div>
-        <div class="slider-div">
-            <text class="now-time">
-                {{ nowTime }}
-            </text>
-            <slider min="{{ sliderMin }}" max="{{ sliderMax }}" value="{{ sliderValue }}"
-                    mode="outset" onchange="change" disabled="{{ finishFlag }}"></slider>
-            <text class="duration-time">
-                {{ durationTime }}
-            </text>
-        </div>
-    </div>
+    <progress-info duration="{{ duration }}"
+                   curr-time="{{ currTime }}"
+                   @progress-change="progressChange">
+    </progress-info>>
 </div>

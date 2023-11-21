@@ -1,0 +1,102 @@
+.progressBox, .progressBoxTouch {
+    width: 100%;
+    height: 32px;
+    position: absolute;
+    bottom: 0px;
+    align-items: flex-end;
+    z-index: 99;
+}
+
+.progressBoxTouch {
+    height: 150px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
+}
+
+.sliderBox, .sliderBoxTouch {
+    padding: 0px 24px;
+    height: 12px;
+    width: 100%;
+}
+
+.sliderBoxTouch {
+    height: 32px;
+
+}
+
+.sliderBg, .sliderBgTouch {
+    top: 4px;
+    height: 4px;
+    width: 100%;
+    align-items: center;
+    border-radius: 2px;
+    background-color: #3de5e6eb;
+}
+
+.sliderBgTouch {
+    top: 10px;
+    height: 12px;
+    border-radius: 6px;
+}
+
+.sliderLine, .sliderLineTouch {
+    top: 4px;
+    width: 10%;
+    height: 4px;
+    background-color: #80e5e6eb;
+    position: relative;
+    border-radius: 2px;
+}
+
+.sliderLineTouch {
+    top: 10px;
+    height: 12px;
+    border-radius: 6px;
+    background-color: #FFFFFF;
+}
+
+.sliderDot, .sliderDotTouch {
+    top: 0px;
+    background-color: #80ffffff;
+    width: 12px;
+    height: 12px;
+    border-radius: 6px;
+    left: 0%;
+}
+
+.sliderDotTouch {
+    background-color: #ffffff;
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    right: -16px;
+}
+
+
+.progressTime {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.now-time {
+    font-size: 40px;
+    color: white;
+}
+
+.divider {
+    height: 24px;
+    margin: 20px;
+    color: #C9CDD4;
+    stroke-width: 2px;
+    line-cap: round;
+}
+
+.duration-time {
+    font-size: 40px;
+    color: white;
+}

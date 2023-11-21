@@ -1,0 +1,18 @@
+<div class="{{ isTouch ? 'progressBoxTouch' : 'progressBox' }}"
+     @touchstart="onStart" @touchmove="touchMove" @touchcancel="onEnd" @touchend="onEnd">
+    <div if="{{ isTouch }}" class="progressTime">
+        <text  class="now-time">
+            {{ nowTime }}
+        </text>
+        <divider class="divider" vertical="true"></divider>
+        <text class="duration-time">
+            {{ durationTime }}
+        </text>
+    </div>
+
+    <stack class="{{ isTouch ? 'sliderBoxTouch' : 'sliderBox' }}">
+        <div class="{{ isTouch ? 'sliderBgTouch' : 'sliderBg' }}"></div>
+        <div class="{{ isTouch ? 'sliderLineTouch' : 'sliderLine' }}" style="width: {{ progressValue * 100 + 1 }}%;"></div>
+        <div class="{{ isTouch ? 'sliderDotTouch' : 'sliderDot' }}" style="left: {{ progressValue * 100 - 1 }}%;"></div>
+    </stack>
+</div>

@@ -33,7 +33,7 @@ export default {
             }
         ],
 
-        tabIndex: 0,
+        tabIndex: 1,
         tabBars: ["剧场", "在看", "追剧", "我的"]
     },
     onInit() {
