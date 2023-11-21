@@ -6,12 +6,12 @@ ohos {
     signingConfigs {
         debug {
             storeFile file('C:\\Users\\DZ\\.ohos\\config\\auto_debug_fajs66_com.example.fajs66_30086000609999121.p12')
-            storePassword '0000001BC43E4906AF54EA837E58606B61D8A0A260DE055163F0D8D7DC1E235F5AEFB062C812C06610419A'
-            keyAlias = 'debugKey'
-            keyPassword '0000001BC90D6D7D9FF703D7C55CE886DD15FB5FBB87815E65477869F349DB848A8247EB620A72E73F65E7'
-            signAlg = 'SHA256withECDSA'
+            storePassword '0000001B5082EE5F4080C2469CD40A0F6BB4F8E32BEE7A533A6F5FEFC8F6EF843F45528712B154E7818585'
+            keyPassword '0000001BF1EE6855020D99C2DBD5B22E4D255461A7730977977FEB54CC506D47F5B929BD35E1C7D9DF9D4C'
             profile file('C:\\Users\\DZ\\.ohos\\config\\auto_debug_fajs66_com.example.fajs66_30086000609999121.p7b')
             certpath file('C:\\Users\\DZ\\.ohos\\config\\auto_debug_fajs66_com.example.fajs66_30086000609999121.cer')
+            keyAlias = 'debugKey'
+            signAlg = 'SHA256withECDSA'
         }
     }
     compileSdkVersion 6

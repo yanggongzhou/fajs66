@@ -63,7 +63,7 @@
 
 .bookName {
     margin-top: 6px;
-    color: #333333;
+    color: #FFFFFF;
     font-size: 12px;
     font-weight: 400;
     line-height: 20px;
@@ -76,7 +76,7 @@
 
 .columnName {
     padding: 6px 16px;
-    color: #333333;
+    color: #FFFFFF;
     font-size: 15px;
     font-weight: bold;
 }
@@ -89,6 +89,7 @@
 }
 .moreLoadingTxt {
     font-size: 12px;
+    color: #ffdbdb;
 }
 
 .loading {

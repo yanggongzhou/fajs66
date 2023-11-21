@@ -32,12 +32,15 @@ export default {
                 "cover": "https://nvideo.dramaboxdb.com/73/9x6/96x6/966x0/96600100014/550914637_1/550914637.mp4.jpg",
             }
         ],
+
+        tabIndex: 0,
+        tabBars: ["剧场", "在看", "追剧", "我的"]
     },
     onInit() {
 
     },
-    tabChange(e){
-        console.info("Tab index: " + e.index)
+    tabChange(index){
+        this.tabIndex = index;
     }
 }
 

@@ -3,16 +3,19 @@
 <element src="../../components/swiperVideo/swiperVideo.hml" name="swiper-video"></element>
 <element src="../../components/self/self.hml" name="self-info"></element>
 <div class="container">
-    <tabs class="tabs" onchange="tabChange">
+    <tabs class="tabs" index="{{ tabIndex }}">
         <tab-content class="tab-content" scrollable="false">
             <theater-info></theater-info>
             <swiper-video video-list="{{ videoList }}"></swiper-video>
+            <text>
+                <span>追剧</span>
+            </text>
             <self-info></self-info>
         </tab-content>
-        <tab-bar class="tab-bar" mode="fixed">
-            <text class="tab-text">剧场</text>
-            <text class="tab-text">播放</text>
-            <text class="tab-text">我的</text>
-        </tab-bar>
     </tabs>
+    <div class="tab-bar">
+        <text for="{{ tabBars }}"
+              class="{{ tabIndex === $idx ? 'tab-active' : 'tab-text' }}"
+              @click="tabChange($idx)">{{ $item }}</text>
+    </div>
 </div>
