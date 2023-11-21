@@ -1,5 +1,5 @@
 <list class="container" @scrollbottom="scrollbottom">
-    <list-item class="itemBox" clickeffect="false">
+    <list-item class="itemBox" clickeffect="false" type="swiper">
        <div>
            <swiper autoplay="true" class="swiper" id="swiper" index="0" indicator="true" loop="true" digital="false"
                    scrolleffect="spring">
@@ -8,7 +8,7 @@
            </swiper>
        </div>
     </list-item>
-    <list-item clickeffect="false">
+    <list-item clickeffect="false" type="mock-list">
         <div class="columnBox">
             <text class="columnName">
                 Mock Data
@@ -24,7 +24,7 @@
         </div>
     </list-item>
 
-    <list-item for="homeData" clickeffect="false">
+    <list-item for="homeData" clickeffect="false" type="remote-list">
         <div class="columnBox">
             <text class="columnName">
                 {{ $item.name }}
@@ -40,7 +40,7 @@
         </div>
 
     </list-item>
-    <list-item clickeffect="false">
+    <list-item clickeffect="false" type="loading">
         <div class="moreLoading">
             <chart class="loading" type="loading" segments="{{ loadingData }}"></chart>
             <text class="moreLoadingTxt">
