@@ -55,8 +55,8 @@
         ],
         "name": "default",
         "window": {
-          "designWidth": 720,
-          "autoDesignWidth": true
+          "designWidth": 750,
+          "autoDesignWidth": false
         }
       }
     ]

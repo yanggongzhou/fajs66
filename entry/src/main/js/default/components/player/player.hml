@@ -1,26 +1,31 @@
 <div class="container">
-    <video id="{{ 'videoId' + current }}"
-           onclick="startOrPause()"
-           muted="{{ muted }}"
-           src="{{ src }}"
-           autoplay="{{ autoplay }}"
-           poster="{{ poster }}"
-           controls="{{ controlShow }}"
-           loop="{{ loop }}"
-           onprepared="prepared"
-           onstart="start"
-           onpause="pause"
-           onfinish="finish"
-           ontimeupdate="timeUpdate">
-    </video>
+    <stack class="video-stack">
+        <video id="{{ 'videoId' + current }}"
+               onclick="startOrPause()"
+               muted="{{ muted }}"
+               src="{{ src }}"
+               autoplay="{{ autoplay }}"
+               poster="{{ poster }}"
+               controls="{{ controlShow }}"
+               loop="{{ loop }}"
+               onprepared="prepared"
+               onstart="start"
+               onpause="pause"
+               onfinish="finish"
+               ontimeupdate="timeUpdate">
+        </video>
+
+
+    </stack>
+  
     <div if="{{ isLoading }}" class="loadingBox">
         <stack class="loadingIcon" >
             <chart type="loading" segments="{{ loadingData }}"></chart>
         </stack>
 <!--        <image class="loadingIcon" src="../../common/images/ic_loading.png"></image>-->
     </div>
-   <div else class="playIconBox" onclick="startOrPause()">
-       <image class="playIcon" show="{{ !isPlay }}" src="{{ publicPlayIcon }}"></image>
+   <div if="{{ !isLoading }}" class="playIconBox" onclick="startOrPause()">
+       <image class="playIcon" if="{{ !isPlay }}" src="{{ publicPlayIcon }}"></image>
    </div>
 
     <div if="{{ !isLoading }}" class="progress">

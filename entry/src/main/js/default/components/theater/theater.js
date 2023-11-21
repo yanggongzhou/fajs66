@@ -1,7 +1,6 @@
-import { homeList } from '../../assets/mock';
+import { homeList } from '../../common/mock';
 import Fetch from '@system.fetch';
 import Router from '@system.router';
-import Prompt from '@system.prompt';
 
 export default {
     data: {

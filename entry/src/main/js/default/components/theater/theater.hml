@@ -1,12 +1,12 @@
 <list class="container" @scrollbottom="scrollbottom">
     <list-item class="itemBox" clickeffect="false" type="swiper">
-       <div>
-           <swiper autoplay="true" class="swiper" id="swiper" index="0" indicator="true" loop="true" digital="false"
-                   scrolleffect="spring">
-               <image class="images" src="../../assets/banner1.webp"></image>
-               <image class="images" src="../../assets/banner2.webp"></image>
-           </swiper>
-       </div>
+        <div>
+            <swiper autoplay="true" class="swiper" id="swiper" index="0" indicator="true" loop="true" digital="false"
+                    scrolleffect="spring">
+                <image class="images" src="../../common/images/banner1.webp"></image>
+                <image class="images" src="../../common/images/banner2.webp"></image>
+            </swiper>
+        </div>
     </list-item>
     <list-item clickeffect="false" type="mock-list">
         <div class="columnBox">
@@ -15,7 +15,8 @@
             </text>
             <div class="list">
                 <div for="{{ list }}" class="listItem" onclick="jumpVideo($item)">
-                    <image class="bookCover" src="{{ $item.cover_url }}" alt="../../assets/default_cover.png"></image>
+                    <image class="bookCover" src="{{ $item.cover_url }}" alt="../../common/images/default_cover.png">
+                    </image>
                     <text class="bookName">
                         {{ $item.title }}
                     </text>
@@ -31,7 +32,8 @@
             </text>
             <div class="list">
                 <div for="{{ $item.items }}" class="listItem" onclick="jumpVideo($item)">
-                    <image class="bookCover" src="{{ $item.cover }}" alt="../../assets/default_cover.png"></image>
+                    <image class="bookCover" src="{{ $item.cover }}" alt="../../common/images/default_cover.png">
+                    </image>
                     <text class="bookName">
                         {{ $item.bookName }}
                     </text>
