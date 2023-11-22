@@ -1,0 +1,22 @@
+<div class="operationBox">
+    <div class="drama" @click="drama">
+        <image class="operationIcon" src="{{isEnjoy ? '/common/images/ic_drama_active.png' : '/common/images/ic_drama.png'}}"></image>
+        <text class="operationTxt">{{isEnjoy ? '已追剧' : '追剧'}}</text>
+    </div>
+    <div class="catalog" @click="catalog">
+        <image class="operationIcon" src="/common/images/ic_catalog.png"></image>
+        <text class="operationTxt">选集</text>
+    </div>
+
+    <div if="{{ catalogVisible }}" class="catalogModal {{ catalogVisible ? 'catalogModalVisible' : '' }}">
+        <div class="catalogHeader">
+            <text class="catalogTitle">
+                书籍标题
+            </text>
+            <image @click="closeModal" class="close" src="/common/images/ic_close.png"></image>
+        </div>
+
+
+
+    </div>
+</div>

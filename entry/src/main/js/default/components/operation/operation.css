@@ -1,0 +1,82 @@
+
+.operationBox {
+    position: absolute;
+    z-index: 99;
+    width: 100px;
+    right: 20px;
+    bottom: 100px;
+    min-height: 100px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.catalog {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+}
+
+.drama {
+    flex-direction: column;
+    align-items: center;
+}
+
+.operationIcon {
+    width: 40px;
+    height: 40px;
+}
+
+.operationTxt {
+    margin-top: 5px;
+    font-size: 28px;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+
+.catalogModal {
+    height: 880px;
+    width: 100%;
+    background-color: #FFFFFF;
+    border-radius:  0 0 30px 30px;
+    position: fixed;
+    z-index: 99999;
+    bottom: -881px;
+    transition: bottom 0.3s;
+    left: 0px;
+    flex-direction: column;
+    padding: 48px 40px 96px;
+}
+
+.catalogModalVisible {
+    bottom: 0px;
+}
+
+/* 颜色变化 */
+@keyframes visible{
+    from {
+        bottom: -881px;
+        opacity: 0;
+    }
+    to {
+        bottom: 0px;
+        opacity: 1;
+    }
+}
+
+.catalogHeader {
+    width: 100%;
+    height: 56px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.catalogTitle {
+    font-size: 40px;
+    font-weight: 600;
+    color: #191919;
+}
+
+.close {
+    width: 50px;
+    height: 50px;
+}

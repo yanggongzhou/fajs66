@@ -12,7 +12,6 @@ export default {
         autoplay: false,
         controlShow: false,
         loop: false,
-        publicPlayIcon: '/common/images/ic_public_play.png',
         duration: 0,
         currTime: 0,
         isPlay: false,
@@ -104,6 +103,9 @@ export default {
      */
     progressChange(e) {
         this.currTime = Math.round(this.duration * e.detail.progress);
+        if (this.duration - this.currTime <= 1.1) {
+            this.currTime = (this.duration - 1) > 0 ? this.duration - 1 : 0;
+        }
         this.$element('videoId' + this.current).setCurrentTime({
             currenttime: this.currTime,
         });
