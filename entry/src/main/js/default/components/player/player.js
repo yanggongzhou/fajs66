@@ -23,6 +23,9 @@ export default {
     },
 
     onInit() {
+        if (this.current === 0) {
+            this.autoplay = true;
+        }
         this.$watch('active', 'onWatchActive');
     },
     onWatchActive(newV, oldV) {
