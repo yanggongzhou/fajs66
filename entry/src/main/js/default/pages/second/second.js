@@ -1,4 +1,5 @@
 import Router from '@system.router';
+
 export default {
     data: {
         videoList: [
@@ -42,4 +43,8 @@ export default {
     backIndex: function () {
         Router.back();
     },
+
+    openApp() {
+
+    }
 }

@@ -4,8 +4,11 @@
         id="swiper"
         autoplay="false"
         index="{{ currentIndex }}"
-        indicator="true"
+        indicator="false"
         loop="false"
+        @touchstart="touchStart"
+        @touchcancel="touchEnd"
+        @touchend="touchEnd"
         digital="false"
         vertical="true"
         @change="swiperChange">

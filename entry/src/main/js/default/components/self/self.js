@@ -3,7 +3,6 @@ export default {
     data: {
 
     },
-
     webClick() {
         Router.push({
             uri: "pages/webpage/webpage"
@@ -13,6 +12,7 @@ export default {
     dialogClick() {
         this.$element('hintDialog').show()
     },
+
     sethintDialog(e) {
         this.$element('hintDialog').close()
     },

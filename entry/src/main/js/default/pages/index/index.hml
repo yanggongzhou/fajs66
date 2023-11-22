@@ -7,9 +7,6 @@
         <tab-content class="tab-content" scrollable="false">
             <theater-info></theater-info>
             <swiper-video video-list="{{ videoList }}"></swiper-video>
-            <text>
-                <span>追剧</span>
-            </text>
             <self-info></self-info>
         </tab-content>
     </tabs>

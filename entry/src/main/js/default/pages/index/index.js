@@ -34,7 +34,7 @@ export default {
         ],
 
         tabIndex: 1,
-        tabBars: ["剧场", "在看", "追剧", "我的"]
+        tabBars: ["剧场", "在看", "我的"]
     },
     onInit() {
 

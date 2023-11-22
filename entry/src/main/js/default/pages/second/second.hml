@@ -1,4 +1,3 @@
-<element src="../../components/player/player.hml" name="player-info"></element>
 <element src="../../components/swiperVideo/swiperVideo.hml" name="swiper-video"></element>
 
 <div class="container">
@@ -7,4 +6,13 @@
         <text class="backTxt">返回</text>
     </div>
     <swiper-video video-list="{{ videoList }}"></swiper-video>
+    <div class="adBox" @click="openApp">
+        <image class="adLogo" src="/common/images/ad_banner.png"></image>
+        <div class="adInfo">
+            <text class="adName">刺激战场</text>
+            <text class="adDesc">
+                广告运营位....
+            </text>
+        </div>
+    </div>
 </div>

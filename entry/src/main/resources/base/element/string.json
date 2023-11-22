@@ -2,11 +2,11 @@
   "string": [
     {
       "name": "entry_MainAbility",
-      "value": "劇場HW"
+      "value": "劇場OS"
     },
     {
       "name": "mainability_description",
-      "value": "JS_Empty Ability"
+      "value": "JS_Empty Ability 劇場OS"
     }
   ]
 }

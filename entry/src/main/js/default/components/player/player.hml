@@ -21,12 +21,11 @@
     <div if="{{ isLoading }}" class="loadingBox">
         <image class="loadingIcon" src="/common/images/ic_loading.png"></image>
     </div>
-    <div if="{{ ! isLoading }}" class="playIconBox" onclick="startOrPause()">
+    <div if="{{ ! isLoading }}" class="playIconBox" onclick="startOrPause">
         <image class="playIcon" if="{{ ! isPlay }}" src="/common/images/ic_public_play.png"></image>
     </div>
 
     <operation-info></operation-info>
-
 
     <progress-info duration="{{ duration }}"
                    curr-time="{{ currTime }}"

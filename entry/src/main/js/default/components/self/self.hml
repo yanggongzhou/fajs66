@@ -1,7 +1,4 @@
 <div class="container">
-    <marquee loop="1" scrollamount="8" direction="left" class="marqueetext" id="testmarquee">
-        近日，第十九届中国（深圳）国际文化产业博览交易会在深圳国际会展中心（宝安馆）举办，位于十号馆的中心区是以“坚定文化自信自强 谱写新时代首都文化新篇章”为主题的北京展区，北京展区由北京市委宣传部主办，立足以首善标准做好首都文化这篇大文章，多家文化企业、园区和机构线上、线下参展，数实融合、展城联动，集中展示北京建设全国文化中心的最新成就和推动文化产业高质量发展的生动实践。点众科技携创新技术及优秀的现实题材作品亮相北京展区。.Life is a xxxxxx movie, 人生如戲啊2.
-    </marquee>
 
     <list class="todo-wrapper">
         <list-item class="todo-item" @click="webClick">
@@ -12,6 +9,7 @@
             <text class="todo-title">彈框組件 渲染測試</text>
         </list-item>
     </list>
+
 
     <dialog id="hintDialog" style="margin-bottom: 50%;">
         <div class="dialog-div">
